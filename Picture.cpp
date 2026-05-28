@@ -21,6 +21,9 @@ int main(){
                     cin >> str;
                     cout << str;
                 }
+                if(j==2){
+                    cout << endl;
+                }
             }
         }
     }
