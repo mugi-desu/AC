@@ -5,7 +5,7 @@ int main(){
     int N,a=0,b=0,c=0;
     cin >> N;
     for(int i=0;i<N;i++){
-        int t,x,y,bb,cc;
+        int t,x,y,p,q;
         cin >> t >> x >> y;
         p=x;
         q=y;
@@ -24,6 +24,9 @@ int main(){
                 cout << "No" << endl;
                 return 0;
             }
+            a=t;
+            b=p;
+            c=q;
             continue;
         }
         if((x-b+y-c)%2==0){
