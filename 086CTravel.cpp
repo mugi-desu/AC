@@ -5,32 +5,34 @@ int main(){
     int N,a=0,b=0,c=0;
     cin >> N;
     for(int i=0;i<N;i++){
-        int t,x,y;
+        int t,x,y,bb,cc;
         cin >> t >> x >> y;
-        if(x<a){
-            swap(x,a);
+        p=x;
+        q=y;
+        if(x<b){
+            swap(x,b);
         }
-        if(y<b){
-            swap(y,b);
+        if(y<c){
+            swap(y,c);
         }
-        if(x-a+y-b > t-a){
+        if(x-b+y-c > t-a){
             cout << "No" << endl;
             return 0;
         }
         if((t-a)%2 == 0){
-            if((x-a+y-b)%2==1){
+            if((x-b+y-c)%2==1){
                 cout << "No" << endl;
                 return 0;
             }
             continue;
         }
-        if((x-a+y-b)%2==0){
+        if((x-b+y-c)%2==0){
             cout << "No" << endl;
             return 0;
         }
         a=t;
-        b=x;
-        c=y;
+        b=p;
+        c=q;
     }
     cout << "Yes" << endl;
 }
